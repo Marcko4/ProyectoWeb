@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string fechaActual = DateTime.Now.ToString("dd/MM/yyyy");
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; background-color: #007bff; color: white; padding: 20px;">Sistema de Gestión de Biblioteca</h1>
+        <nav style="text-align: center;">
+            <a asp-controller="Home" asp-action="Index" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #007bff;">Inicio</a>
+            <a asp-controller="Home" asp-action="About" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #007bff;">Sobre Nosotros</a>
+            <a asp-controller="Home" asp-action="Contact" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #007bff;">Contacto</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 900px; margin: 20px auto; padding: 20px;">
+        <section>
+            <h2 style="text-align: center;">Bienvenido a BookHub</h2>
+            <p style="text-align: justify;">Este sistema permite la gestión eficiente de préstamos y devoluciones de libros, el registro de usuarios, y el control de inventario de una biblioteca. Facilita el acceso a la información de los libros disponibles y agiliza los procesos administrativos.</p>
+        </section>
+        <section>
+            <h3>Objetivos del Proyecto</h3>
+            <ul>
+                <li>Generar facturas digitales en cada transacción de préstamo o venta, registrando datos clave del cliente y empleado.</li>
+                <li>Automatizar el envío de comprobantes electrónicos a los clientes mediante correo electrónico.</li>
+                <li>Ofrecer una opción intuitiva para que los usuarios elijan entre alquiler o compra de material bibliográfico.</li>
+                <li>Implementar la digitalización y almacenamiento seguro de documentos generados en PDF.</li>
+            </ul>
+        </section>
+        <section style="text-align: center;">
+            <img src="~/images/LogoBookHub.jpg" alt="Imagen ilustrativa de una biblioteca" style="max-width: 100%;">
+        </section>
+    </main>
+
+    <footer style="text-align: center; background-color: #007bff; color: white; padding: 10px;">
+        <p>Grupo 7 | Ingeniería en Informática | @fechaActual</p>
+    </footer>
+</body>
+</html>
