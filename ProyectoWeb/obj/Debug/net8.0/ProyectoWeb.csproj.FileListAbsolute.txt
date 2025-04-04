@@ -32,3 +32,4 @@ C:\Users\marco\Desktop\Programacion\ProyectoWeb\ProyectoWeb\obj\Debug\net8.0\ref
 C:\Users\marco\Desktop\Programacion\ProyectoWeb\ProyectoWeb\obj\Debug\net8.0\ProyectoWeb.pdb
 C:\Users\marco\Desktop\Programacion\ProyectoWeb\ProyectoWeb\obj\Debug\net8.0\ProyectoWeb.genruntimeconfig.cache
 C:\Users\marco\Desktop\Programacion\ProyectoWeb\ProyectoWeb\obj\Debug\net8.0\ref\ProyectoWeb.dll
+C:\Users\marco\Desktop\Programacion\ProyectoWeb\ProyectoWeb\obj\Debug\net8.0\ProyectoWeb.sourcelink.json
