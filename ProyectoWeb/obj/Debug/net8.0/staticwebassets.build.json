@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p4MlWiw3VETeYZtw63FNn+r2/P6KtmsS0ohsTvwsv00=",
+  "Hash": "2/Ydo5W/hMmFX8pwBCQDgP8Z+c9Np9Nu9NT8R3/8tE8=",
   "Source": "ProyectoWeb",
   "BasePath": "_content/ProyectoWeb",
   "Mode": "Default",
@@ -99,6 +99,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Banner1.png",
+      "SourceId": "ProyectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\",
+      "BasePath": "_content/ProyectoWeb",
+      "RelativePath": "images/Banner1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5r4cwa3537",
+      "Integrity": "EZua/OLMXotgprO/kJ8erudHJ7ajAsmrVOxdA+4//mY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Banner1.png"
+    },
+    {
+      "Identity": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Comohacerquetepasencosasbuenas.jpg",
+      "SourceId": "ProyectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\",
+      "BasePath": "_content/ProyectoWeb",
+      "RelativePath": "images/Comohacerquetepasencosasbuenas#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hfvridji3w",
+      "Integrity": "I9KSMChn+suzrMwtbyXKm1VNQHoa/TziPU6y7a+EXhk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Comohacerquetepasencosasbuenas.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Elpoderdelahora.jpg",
+      "SourceId": "ProyectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\",
+      "BasePath": "_content/ProyectoWeb",
+      "RelativePath": "images/Elpoderdelahora#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "htuv2mnflb",
+      "Integrity": "xTdllHP9dOh71Ttbxy+b6VlDN9wYYaNeYOsXmY7gp10=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Elpoderdelahora.jpg"
     },
     {
       "Identity": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\LogoBookHub.jpg",
@@ -1502,6 +1565,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/Banner1.5r4cwa3537.png",
+      "AssetFile": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Banner1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1062598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EZua/OLMXotgprO/kJ8erudHJ7ajAsmrVOxdA+4//mY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 12:06:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5r4cwa3537"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Banner1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EZua/OLMXotgprO/kJ8erudHJ7ajAsmrVOxdA+4//mY="
+        }
+      ]
+    },
+    {
+      "Route": "images/Banner1.png",
+      "AssetFile": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Banner1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1062598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EZua/OLMXotgprO/kJ8erudHJ7ajAsmrVOxdA+4//mY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 12:06:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EZua/OLMXotgprO/kJ8erudHJ7ajAsmrVOxdA+4//mY="
+        }
+      ]
+    },
+    {
+      "Route": "images/Comohacerquetepasencosasbuenas.hfvridji3w.jpg",
+      "AssetFile": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Comohacerquetepasencosasbuenas.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "91378"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I9KSMChn+suzrMwtbyXKm1VNQHoa/TziPU6y7a+EXhk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 12:17:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hfvridji3w"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Comohacerquetepasencosasbuenas.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-I9KSMChn+suzrMwtbyXKm1VNQHoa/TziPU6y7a+EXhk="
+        }
+      ]
+    },
+    {
+      "Route": "images/Comohacerquetepasencosasbuenas.jpg",
+      "AssetFile": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Comohacerquetepasencosasbuenas.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "91378"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I9KSMChn+suzrMwtbyXKm1VNQHoa/TziPU6y7a+EXhk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 12:17:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-I9KSMChn+suzrMwtbyXKm1VNQHoa/TziPU6y7a+EXhk="
+        }
+      ]
+    },
+    {
+      "Route": "images/Elpoderdelahora.htuv2mnflb.jpg",
+      "AssetFile": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Elpoderdelahora.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82249"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xTdllHP9dOh71Ttbxy+b6VlDN9wYYaNeYOsXmY7gp10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 12:08:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "htuv2mnflb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Elpoderdelahora.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xTdllHP9dOh71Ttbxy+b6VlDN9wYYaNeYOsXmY7gp10="
+        }
+      ]
+    },
+    {
+      "Route": "images/Elpoderdelahora.jpg",
+      "AssetFile": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Elpoderdelahora.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82249"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xTdllHP9dOh71Ttbxy+b6VlDN9wYYaNeYOsXmY7gp10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 12:08:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xTdllHP9dOh71Ttbxy+b6VlDN9wYYaNeYOsXmY7gp10="
         }
       ]
     },

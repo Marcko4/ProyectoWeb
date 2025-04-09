@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Banner1.png",
+      "PackagePath": "staticwebassets\\images\\Banner1.png"
+    },
+    {
+      "Id": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Comohacerquetepasencosasbuenas.jpg",
+      "PackagePath": "staticwebassets\\images\\Comohacerquetepasencosasbuenas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\Elpoderdelahora.jpg",
+      "PackagePath": "staticwebassets\\images\\Elpoderdelahora.jpg"
+    },
+    {
       "Id": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\images\\LogoBookHub.jpg",
       "PackagePath": "staticwebassets\\images\\LogoBookHub.jpg"
     },
