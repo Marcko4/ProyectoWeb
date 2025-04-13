@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro</title>
     <style>
         * {
             box-sizing: border-box;
@@ -30,7 +30,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 320px;
             max-width: 100%;
-            overflow: hidden;
         }
 
         h2 {
@@ -45,7 +44,7 @@
             border-radius: 4px;
         }
 
-        .login-btn, .register-btn {
+        .register-btn, .back-btn {
             width: 100%;
             padding: 10px;
             background-color: #e54725;
@@ -55,8 +54,7 @@
             cursor: pointer;
         }
 
-            .login-btn:hover,
-            .register-btn:hover {
+            .register-btn:hover, .back-btn:hover {
                 background-color: #d43f1b;
             }
 
@@ -69,29 +67,21 @@
 </head>
 <body style="background-image: url('/images/fondologin.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-    <center>
-        <div class="login-container">
-            <img src="/images/LoginUser.png" alt="Banner Login">
-            <h2>Login</h2>
-
-            @if (TempData["Mensaje"] != null)
-            {
-                <p style="color: green; text-align:center;">@TempData["Mensaje"]</p>
-            }
-
-            <form>
-                <input type="text" class="input-field" placeholder="Usuario" required>
-                <input type="password" class="input-field" placeholder="Contraseña" required>
-                <button type="submit" class="login-btn">Iniciar Sesión</button>
-            </form>
-
-            <br>
-
-            <form action="/Home/Registro" method="get">
-                <button type="submit" class="register-btn">Registrarse</button>
-            </form>
-        </div>
-    </center>
+    <div class="login-container">
+        <img src="/images/LoginUser.png" alt="Banner Registro">
+        <h2>Registro</h2>
+        <form action="/Home/Guardar" method="post">
+            <input type="text" class="input-field" name="fullName" placeholder="Nombre completo" required>
+            <input type="text" class="input-field" name="cedula" placeholder="Cédula" required>
+            <input type="email" class="input-field" name="email" placeholder="Correo electrónico" required>
+            <input type="text" class="input-field" name="phone" placeholder="Teléfono" required>
+            <input type="text" class="input-field" name="address" placeholder="Dirección" required>
+            <button type="submit" class="register-btn">Registrarse</button>
+        </form>
+        <form action="/Home/Login" method="get">
+            <button type="submit" class="back-btn">Volver al Login</button>
+        </form>
+    </div>
 
 </body>
 </html>
