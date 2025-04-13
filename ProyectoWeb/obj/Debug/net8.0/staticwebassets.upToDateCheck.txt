@@ -3,6 +3,8 @@ wwwroot\favicon.ico
 wwwroot\images\Banner1.png
 wwwroot\images\Comohacerquetepasencosasbuenas.jpg
 wwwroot\images\Elpoderdelahora.jpg
+wwwroot\images\fondologin.jpg
+wwwroot\images\LoginUser.png
 wwwroot\images\LogoBookHub.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

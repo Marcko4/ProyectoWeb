@@ -33,4 +33,10 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Login()
+    {
+        return View(); // Esto buscará /Views/Home/Login.cshtml
+    }
+
+
 }
