@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OKLW0A2cr+SatqDlczyEmuOQRrHuJJwS9SX1szUVh/8=",
+  "Hash": "R9dWxtr+X56PHXyoAjpgWZa7Gb3A1YSi7yu680EgIYo=",
   "Source": "ProyectoWeb",
   "BasePath": "_content/ProyectoWeb",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\css\\styles.css",
+      "SourceId": "ProyectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\",
+      "BasePath": "_content/ProyectoWeb",
+      "RelativePath": "css/styles#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "14oscvkob5",
+      "Integrity": "7+5LmtF0G6CiTv59FFxKsu7iovDza3Nu6kqLyRpdGUo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
       "Identity": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\favicon.ico",
@@ -1798,6 +1819,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles.14oscvkob5.css",
+      "AssetFile": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\css\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3719"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7+5LmtF0G6CiTv59FFxKsu7iovDza3Nu6kqLyRpdGUo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 13:37:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "14oscvkob5"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7+5LmtF0G6CiTv59FFxKsu7iovDza3Nu6kqLyRpdGUo="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles.css",
+      "AssetFile": "C:\\Users\\marco\\Desktop\\Programacion\\ProyectoWeb\\ProyectoWeb\\wwwroot\\css\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3719"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7+5LmtF0G6CiTv59FFxKsu7iovDza3Nu6kqLyRpdGUo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 13:37:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7+5LmtF0G6CiTv59FFxKsu7iovDza3Nu6kqLyRpdGUo="
         }
       ]
     },
