@@ -3,44 +3,292 @@
     string fechaActual = DateTime.Now.ToString("dd/MM/yyyy");
 }
 
-<!-- Barra superior con botón de iniciar sesión -->
-<div class="d-flex justify-content-between align-items-center p-3 bg-light shadow-sm">
-    <h2 class="ms-3">📘 BookHub</h2>
-    <a href="@Url.Action("Login", "Home")" class="btn btn-outline-primary me-3">Iniciar Sesión</a>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f1faee;
+            color: #343a40;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .top-bar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+            .top-bar h2 {
+                color: #1d3557;
+                font-weight: 700;
+            }
+
+        .btn-outline-primary {
+            border-color: #1d3557;
+            color: #1d3557;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: #1d3557;
+                color: #fff;
+            }
+
+        .carousel-caption {
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
 
 
-<!-- Carrusel principal con un libro destacado -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="/images/Banner1.png" class="d-block w-100" alt="Banner 1">
-            <div class="carousel-caption d-none d-md-block text-center">
+            .carousel-caption h5 {
+                font-size: 2rem;
+                color: white 
+            }
 
-                <h5 class="display-5 fw-bold">Cómo hacer que te pasen cosas buenas</h5>
-                <p>₲190.000</p>
-                <img src="/images/Comohacerquetepasencosasbuenas.jpg" class="d-block mx-auto mb-3" alt="Libro Cómo hacer que te pasen cosas buenas" style="max-width: 200px;">
-                <a href="#" class="btn btn-light">Comprar</a>
+            .carousel-caption p {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                color: white 
+            }
+
+            .carousel-caption .btn {
+                background-color: #a8dadc;
+                border: none;
+                color: #1d3557;
+                font-weight: 600;
+                transition: 0.3s ease;
+            }
+
+                .carousel-caption .btn:hover {
+                    background-color: #457b9d;
+                    color: white;
+                }
+
+        .section-title {
+            color: #1d3557;
+            font-weight: bold;
+        }
+
+        .card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card:hover {
+                transform: scale(1.03);
+                box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            }
+
+        .card-title {
+            font-weight: 600;
+            color: #1d3557;
+            font-size: 1rem;
+        }
+
+
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            background-color: #1d3557;
+            color: #fff;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-primary" href="#">📘 BookHub</a>
+            <div>
+                <a href="@Url.Action("Login", "Home")" class="btn btn-outline-primary">Iniciar Sesión</a>
             </div>
         </div>
-    </div>
-</div>
+    </nav>
 
-<!-- Sección de libros más vendidos -->
-<section class="mt-5 px-4">
-    <h2 class="mb-4 text-center">📈 Más Vendidos</h2>
-    <div class="row row-cols-1 row-cols-md-5 g-4 justify-content-center">
-        <div class="col">
-            <div class="card h-100">
-                <img src="/images/Elpoderdelahora.jpg" class="card-img-top" alt="Libro 1">
-                <div class="card-body text-center">
-                    <h6 class="card-title">El poder del ahora</h6>
+
+    <!-- Carrusel principal con varios libros destacados -->
+    <div id="carouselLibrosDestacados" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+
+            <!-- Libro 1 -->
+            <div class="carousel-item active">
+                <img src="/images/Banner1.jpg" class="d-block w-100" alt="Banner 1">
+                <div class="carousel-caption d-none d-md-block text-center">
+                    <h5 class="fw-bold">Cómo hacer que te pasen cosas buenas</h5>
+                    <p>₲190.000</p>
+                    <img src="/images/Comohacerquetepasencosasbuenas.jpg" class="d-block mx-auto mb-3" alt="Libro" style="max-width: 200px; height: auto; object-fit: contain;">
+                    <a href="#" class="btn">Comprar</a>
                 </div>
             </div>
+
+            <!-- Libro 2 -->
+            <div class="carousel-item">
+                <img src="/images/Banner4.jpg" class="d-block w-100" alt="Banner 2">
+                <div class="carousel-caption d-none d-md-block text-center">
+                    <h5 class="fw-bold">El poder del ahora</h5>
+                    <p>₲150.000</p>
+                    <img src="/images/Elpoderdelahora.jpg" class="d-block mx-auto mb-3" alt="Libro" style="max-width: 200px; height: auto; object-fit: contain;">
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+            </div>
+
+            <!-- Libro 3 -->
+            <div class="carousel-item">
+                <img src="/images/Banner3.jpg" class="d-block w-100" alt="Banner 3">
+                <div class="carousel-caption d-none d-md-block text-center">
+                    <h5 class="fw-bold">La inteligencia emocional</h5>
+                    <p>₲170.000</p>
+                    <img src="/images/Lainteligenciaemocional.jpg" class="d-block mx-auto mb-3" alt="Libro" style="max-width: 200px; height: auto; object-fit: contain;">
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+            </div>
+
         </div>
-        <!-- Podés agregar más libros acá -->
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLibrosDestacados" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselLibrosDestacados" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselLibrosDestacados" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Libro 1"></button>
+            <button type="button" data-bs-target="#carouselLibrosDestacados" data-bs-slide-to="1" aria-label="Libro 2"></button>
+            <button type="button" data-bs-target="#carouselLibrosDestacados" data-bs-slide-to="2" aria-label="Libro 3"></button>
+        </div>
     </div>
-</section>
 
 
+    <!-- Sección de libros más vendidos -->
+    <section class="mt-5 px-4">
+        <h2 class="mb-4 text-center section-title">📈 Más Vendidos</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 justify-content-center">
 
+            <!-- Libro 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Elpoderdelahora.jpg" class="card-img-top" alt="Libro 1">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">El poder del ahora</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Habitosatomicosjpg.jpg" class="card-img-top" alt="Libro 2">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Hábitos Atómicos</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Comohacerquetepasencosasbuenas.jpg" class="card-img-top" alt="Libro 3">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Cómo hacer que te pasen cosas buenas</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Lainteligenciaemocional.jpg" class="card-img-top" alt="Libro 4">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">La inteligencia emocional</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Libro 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Elextranjero.jpg" class="card-img-top" alt="Libro 5">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">El extranjero</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro 6 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Personavitamina.jpg" class="card-img-top" alt="Libro 6">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Encuentra tu persona vitamina</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro 7 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Padrericopadrepobre.jpg" class="card-img-top" alt="Libro 7">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Padre Rico Padre Pobre</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro 8 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Elinversorinteligente.jpg" class="card-img-top" alt="Libro 8">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">El inversor inteligente</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro 9 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Lafelicidad.jpg " class="card-img-top" alt="Libro 9">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">La Felicidad</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Libro 10 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/images/Secretosmentemillonaria.jpg" class="card-img-top" alt="Libro 10">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Los secretos de la mente millonaria</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Podés seguir agregando más libros acá... -->
+        </div>
+    </section>
+
+
+    <footer>
+        <p>BookHub © @fechaActual</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
