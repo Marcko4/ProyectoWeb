@@ -1,0 +1,49 @@
+﻿@model ProyectoWeb.Models.Libro
+
+<link rel="stylesheet" href="~/css/detallelibro.css" />
+
+<div class="container detalle-libro py-5">
+    @if (Model != null)
+    {
+        <div class="row">
+            <!-- Columna de la imagen -->
+            <div class="col-md-5 mb-4">
+                <div class="img-container">
+                    <img src="@Model.ImagenUrl" alt="@Model.Nombre" class="img-fluid" />
+                </div>
+            </div>
+
+            <!-- Columna de los datos -->
+            <div class="col-md-7">
+                <h2 class="titulo-libro">@Model.Nombre</h2>
+                <p class="detalle"><strong>Autor:</strong> @Model.Autor</p>
+                <p class="detalle"><strong>Idioma:</strong> @Model.Idioma</p>
+                <p class="detalle"><strong>Disponible:</strong> @(Model.Disponible ? "Sí" : "No")</p>
+                <p class="detalle"><strong>Categoría:</strong> @Model.Categoria</p>
+                <p class="detalle"><strong>Código:</strong> @Model.Codigo</p>
+
+                <div class="precios mt-4">
+                    <h5>Precios:</h5>
+                    <p>💵 <strong>Venta:</strong> ₲@Model.PrecioVenta</p>
+                    <p>📚 <strong>Alquiler:</strong> ₲@Model.PrecioAlquiler</p>
+                </div>
+
+                <h5 class="mt-4">Descripción:</h5>
+                <p class="descripcion">@Model.Descripcion</p>
+
+                <form method="post" asp-controller="Carrito" asp-action="Agregar">
+                    <input type="hidden" name="libroId" value="@Model.Id" />
+                    <button type="submit" class="btn btn-agregar">🛒 Agregar al carrito</button>
+                </form>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger text-center">
+            <h4>⚠️ No se encontró la información del libro.</h4>
+        </div>
+    }
+</div>
+
+

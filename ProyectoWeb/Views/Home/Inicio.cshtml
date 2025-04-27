@@ -39,7 +39,7 @@
         <div class="carousel-inner">
 
             <!-- Libro 1 -->
-            <div class="carousel-item active">
+            <div class="carousel-item active" id="1">
                 <img src="/images/Banner1.jpg" class="d-block w-100" alt="Banner 1">
                 <div class="carousel-caption d-none d-md-block text-center">
                     <h5 class="fw-bold">Cómo hacer que te pasen cosas buenas</h5>
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Libro 2 -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="2">
                 <img src="/images/Banner4.jpg" class="d-block w-100" alt="Banner 2">
                 <div class="carousel-caption d-none d-md-block text-center">
                     <h5 class="fw-bold">El poder del ahora</h5>
@@ -61,7 +61,7 @@
             </div>
 
             <!-- Libro 3 -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="3">
                 <img src="/images/Banner3.jpg" class="d-block w-100" alt="Banner 3">
                 <div class="carousel-caption d-none d-md-block text-center">
                     <h5 class="fw-bold">La inteligencia emocional</h5>
@@ -97,103 +97,127 @@
         <h2 class="mb-4 text-center section-title">📈 Más Vendidos</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 justify-content-center">
 
-            <!-- Libro 1 -->
+                <!-- Libro 1 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Elpoderdelahora.jpg" class="card-img-top" alt="Libro 1">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">El poder del ahora</h6>
+                <a href="/Home/DetalleLibro/1" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Elpoderdelahora.jpg" class="card-img-top" alt="El poder del ahora">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">El poder del ahora</h6>
+                            <p class="card-text">₲150.000</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
+
 
             <!-- Libro 2 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Habitosatomicosjpg.jpg" class="card-img-top" alt="Libro 2">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Hábitos Atómicos</h6>
+                <a href="/Home/DetalleLibro/2" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Habitosatomicosjpg.jpg" class="card-img-top" alt="Hábitos Atómicos">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Hábitos Atómicos</h6>
+                            <p class="card-text">₲120.000</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Libro 3 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Comohacerquetepasencosasbuenas.jpg" class="card-img-top" alt="Libro 3">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Cómo hacer que te pasen cosas buenas</h6>
+                <a href="/Home/DetalleLibro/3" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Comohacerquetepasencosasbuenas.jpg" class="card-img-top" alt="Cómo hacer que te pasen cosas buenas">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Cómo hacer que te pasen cosas buenas</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Libro 4 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Lainteligenciaemocional.jpg" class="card-img-top" alt="Libro 4">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">La inteligencia emocional</h6>
+                <a href="/Home/DetalleLibro/4" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Lainteligenciaemocional.jpg" class="card-img-top" alt="La inteligencia emocional">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">La inteligencia emocional</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
+
             <!-- Libro 5 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Elextranjero.jpg" class="card-img-top" alt="Libro 5">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">El extranjero</h6>
+                <a href="/Home/DetalleLibro/5" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Elextranjero.jpg" class="card-img-top" alt="El extranjero">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">El extranjero</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Libro 6 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Personavitamina.jpg" class="card-img-top" alt="Libro 6">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Encuentra tu persona vitamina</h6>
+                <a href="/Home/DetalleLibro/6" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Personavitamina.jpg" class="card-img-top" alt="Encuentra tu persona vitamina">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Encuentra tu persona vitamina</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Libro 7 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Padrericopadrepobre.jpg" class="card-img-top" alt="Libro 7">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Padre Rico Padre Pobre</h6>
+                <a href="/Home/DetalleLibro/7" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Padrericopadrepobre.jpg" class="card-img-top" alt="Padre Rico Padre Pobre">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Padre Rico Padre Pobre</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Libro 8 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Elinversorinteligente.jpg" class="card-img-top" alt="Libro 8">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">El inversor inteligente</h6>
+                <a href="/Home/DetalleLibro/8" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Elinversorinteligente.jpg" class="card-img-top" alt="El inversor inteligente">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">El inversor inteligente</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Libro 9 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Lafelicidad.jpg " class="card-img-top" alt="Libro 9">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">La Felicidad</h6>
+                <a href="/Home/DetalleLibro/9" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Lafelicidad.jpg" class="card-img-top" alt="La Felicidad">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">La Felicidad</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Libro 10 -->
             <div class="col">
-                <div class="card h-100">
-                    <img src="/images/Secretosmentemillonaria.jpg" class="card-img-top" alt="Libro 10">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Los secretos de la mente millonaria</h6>
+                <a href="/Home/DetalleLibro/10" class="text-decoration-none text-dark">
+                    <div class="card h-100">
+                        <img src="/images/Secretosmentemillonaria.jpg" class="card-img-top" alt="Los secretos de la mente millonaria">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Los secretos de la mente millonaria</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Podés seguir agregando más libros acá... -->
