@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "GX2tHHPUNn0=",
+  "dgSpecHash": "fpuIbzPd02Q=",
   "success": true,
-  "projectFilePath": "C:\\Users\\cesar\\Source\\Repos\\ProyectoWeb\\ProyectoWeb\\ProyectoWeb.csproj",
+  "projectFilePath": "C:\\Users\\ACER\\Source\\Repos\\ProyectoWeb\\ProyectoWeb\\ProyectoWeb.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\ACER\\Source\\Repos\\ProyectoWeb\\ProyectoWeb\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
