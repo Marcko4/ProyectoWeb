@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="~/ProyectoWeb.styles.css" asp-append-version="true" />
     <link href="~/css/estilos.css" rel="stylesheet" />
 
+    <style>
+        /* Estilos básicos de modo oscuro */
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+            .dark-mode .navbar {
+                background-color: #1f1f1f !important;
+            }
+
+            .dark-mode .card {
+                background-color: #1f1f1f;
+                color: #ffffff;
+            }
+
+            .dark-mode footer {
+                background-color: #1f1f1f;
+                color: #ffffff;
+            }
+    </style>
+
 </head>
 <body>
     <header>
@@ -26,24 +48,58 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li
-                         <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Inicio">Inicio</a>
                         </li>
                     </ul>
+                    <!-- Botón de Modo Oscuro a la derecha -->
+                    <div class="d-flex">
+                        <button id="toggleModo" class="btn btn-outline-secondary ms-2">🌙 Modo Nocturno</button>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
+    <footer class="text-center py-3">
+        <p>BookHub © @DateTime.Now.ToString("yyyy")</p>
+    </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        const toggleButton = document.getElementById('toggleModo');
+        const body = document.body;
+
+        // Cargar el estado guardado
+        if (localStorage.getItem('modo') === 'oscuro') {
+            body.classList.add('dark-mode');
+            toggleButton.textContent = '☀️ Modo Diurno';
+        }
+
+        // Cambiar modo cuando se hace clic
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '☀️ Modo Diurno';
+                localStorage.setItem('modo', 'oscuro');
+            } else {
+                toggleButton.textContent = '🌙 Modo Nocturno';
+                localStorage.setItem('modo', 'claro');
+            }
+        });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

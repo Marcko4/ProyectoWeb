@@ -2,14 +2,21 @@
 .detalle-libro {
     padding-top: 50px;
     padding-bottom: 50px;
+    animation: fadeIn 1s ease-out;
 }
 
 /* Imagen del libro */
 .img-container {
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+    .img-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
 
     .img-container img {
         width: 100%;
@@ -19,29 +26,63 @@
 
 /* Título del libro */
 .titulo-libro {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 800;
     margin-bottom: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
 }
+
+    .titulo-libro:hover {
+        color: #28a745;
+    }
 
 /* Detalles */
 .detalle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    color: #555;
 }
 
 /* Precios */
-.precios p {
-    font-size: 1.1rem;
+.precio-venta, .precio-alquiler {
+    font-size: 1.2rem;
     margin: 0;
+    color: #222;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out; /* Transición suave para el color */
+    animation: pulse 2s infinite; /* Pulso y brillo suave */
+}
+
+/* Animación de Precio (Pulse/Brillo Suave) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #222;
+        text-shadow: 0 0 5px rgba(255, 153, 0, 0.8);
+    }
+
+    50% {
+        transform: scale(1.05);
+        color: #222; /* Color brillante */
+        text-shadow: 0 0 15px rgba(255,
+        204, 0, 1); /* Brillo suave */
+    }
+
+    100% {
+        transform: scale(1);
+        color: #222;
+        text-shadow: 0 0 5px rgba(255, 153, 0, 0.8);
+    }
 }
 
 /* Descripción */
 .descripcion {
-    margin-top: 15px;
-    font-size: 1rem;
-    line-height: 1.6;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
     text-align: justify;
+    color: #666;
 }
 
 /* Botón Agregar al carrito */
@@ -49,14 +90,57 @@
     background-color: #28a745;
     color: white;
     font-size: 1.2rem;
-    padding: 12px 30px;
-    margin-top: 20px;
+    padding: 14px 32px;
+    margin-top: 25px;
     border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
     .btn-agregar:hover {
         background-color: #218838;
-        transform: scale(1.05);
+        transform: scale(1.07);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    }
+
+/* --- Animaciones --- */
+
+/* Fade In al cargar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Popup de agregado al carrito */
+.popup-agregado {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+    z-index: 9999;
+}
+
+    /* Clase para mostrar el popup */
+    .popup-agregado.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }

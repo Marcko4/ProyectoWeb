@@ -15,6 +15,7 @@
 
             <!-- Columna de los datos -->
             <div class="col-md-7">
+
                 <h2 class="titulo-libro">@Model.Nombre</h2>
                 <p class="detalle"><strong>Autor:</strong> @Model.Autor</p>
                 <p class="detalle"><strong>Idioma:</strong> @Model.Idioma</p>
@@ -24,8 +25,8 @@
 
                 <div class="precios mt-4">
                     <h5>Precios:</h5>
-                    <p>💵 <strong>Venta:</strong> ₲@Model.PrecioVenta</p>
-                    <p>📚 <strong>Alquiler:</strong> ₲@Model.PrecioAlquiler</p>
+                    <p class="precio-venta">💵 <strong>Venta:</strong> ₲@Model.PrecioVenta</p>
+                    <p class="precio-alquiler">📚 <strong>Alquiler:</strong> ₲@Model.PrecioAlquiler</p>
                 </div>
 
                 <h5 class="mt-4">Descripción:</h5>
@@ -35,6 +36,12 @@
                     <input type="hidden" name="libroId" value="@Model.Id" />
                     <button type="submit" class="btn btn-agregar">🛒 Agregar al carrito</button>
                 </form>
+
+                <!-- Popup de confirmación -->
+                <div id="popup-agregado" class="popup-agregado">
+                    ✅ ¡Libro agregado al carrito!
+                </div>
+
             </div>
         </div>
     }
@@ -46,4 +53,20 @@
     }
 </div>
 
+<script>
+    const form = document.querySelector('form');
+    const popup = document.getElementById('popup-agregado');
 
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío automático
+
+        // Mostrar el popup
+        popup.classList.add('show');
+
+        // Ocultar después de 2 segundos y enviar el formulario
+        setTimeout(() => {
+            popup.classList.remove('show');
+            form.submit();
+        }, 2000);
+    });
+</script>
