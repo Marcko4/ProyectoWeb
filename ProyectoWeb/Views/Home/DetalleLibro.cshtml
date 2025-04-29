@@ -1,72 +1,166 @@
 ﻿@model ProyectoWeb.Models.Libro
 
-<link rel="stylesheet" href="~/css/detallelibro.css" />
+@{
+    ViewData["Title"] = "Detalle Libro";
+    string fechaActual = DateTime.Now.ToString("dd/MM/yyyy");
+}
 
-<div class="container detalle-libro py-5">
-    @if (Model != null)
-    {
-        <div class="row">
-            <!-- Columna de la imagen -->
-            <div class="col-md-5 mb-4">
-                <div class="img-container">
-                    <img src="@Model.ImagenUrl" alt="@Model.Nombre" class="img-fluid" />
-                </div>
-            </div>
+@{
+    Layout = null;
+}
 
-            <!-- Columna de los datos -->
-            <div class="col-md-7">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
 
-                <h2 class="titulo-libro">@Model.Nombre</h2>
-                <p class="detalle"><strong>Autor:</strong> @Model.Autor</p>
-                <p class="detalle"><strong>Idioma:</strong> @Model.Idioma</p>
-                <p class="detalle"><strong>Disponible:</strong> @(Model.Disponible ? "Sí" : "No")</p>
-                <p class="detalle"><strong>Categoría:</strong> @Model.Categoria</p>
-                <p class="detalle"><strong>Código:</strong> @Model.Codigo</p>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
 
-                <div class="precios mt-4">
-                    <h5>Precios:</h5>
-                    <p class="precio-venta">💵 <strong>Venta:</strong> ₲@Model.PrecioVenta</p>
-                    <p class="precio-alquiler">📚 <strong>Alquiler:</strong> ₲@Model.PrecioAlquiler</p>
-                </div>
+<body>
 
-                <h5 class="mt-4">Descripción:</h5>
-                <p class="descripcion">@Model.Descripcion</p>
-
-                <form method="post" asp-controller="Carrito" asp-action="Agregar">
-                    <input type="hidden" name="libroId" value="@Model.Id" />
-                    <button type="submit" class="btn btn-agregar">🛒 Agregar al carrito</button>
-                </form>
-
-                <!-- Popup de confirmación -->
-                <div id="popup-agregado" class="popup-agregado">
-                    ✅ ¡Libro agregado al carrito!
-                </div>
-
+    <!-- Top Navbar (igual a la de Inicio.cshtml) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-primary" href="#">📘 BookHub</a>
+            <div class="d-flex align-items-center">
+                <a href="@Url.Action("Inicio", "Home")" class="btn btn-outline-secondary me-2">Inicio</a>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-outline-secondary me-2">About</a>
+                <a href="@Url.Action("Login", "Home")" class="btn btn-outline-primary me-2">Iniciar Sesión</a>
+                <button id="toggleModo" class="btn btn-outline-secondary">🌙 Modo Nocturno</button>
             </div>
         </div>
-    }
-    else
-    {
-        <div class="alert alert-danger text-center">
-            <h4>⚠ No se encontró la información del libro.</h4>
-        </div>
-    }
-</div>
+    </nav>
 
-<script>
-    const form = document.querySelector('form');
-    const popup = document.getElementById('popup-agregado');
+    <!-- Contenido de Detalle Libro (Manteniendo estilo original) -->
+    <div class="container py-5 mt-5 pt-3">
+        @if (Model != null)
+        {
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <div class="img-container">
+                        <img src="@Model.ImagenUrl" alt="@Model.Nombre" class="img-fluid" />
+                    </div>
+                </div>
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evita el envío automático
+                <div class="col-md-7">
+                    <h2 class="titulo-libro">@Model.Nombre</h2>
+                    <p class="detalle"><strong>Autor:</strong> @Model.Autor</p>
+                    <p class="detalle"><strong>Idioma:</strong> @Model.Idioma</p>
+                    <p class="detalle"><strong>Disponible:</strong> @(Model.Disponible ? "Sí" : "No")</p>
+                    <p class="detalle"><strong>Categoría:</strong> @Model.Categoria</p>
+                    <p class="detalle"><strong>Código:</strong> @Model.Codigo</p>
 
-        // Mostrar el popup
-        popup.classList.add('show');
+                    <div class="precios mt-4">
+                        <h5>Precios:</h5>
+                        <p class="precio-venta">💵 <strong>Venta:</strong> ₲@Model.PrecioVenta</p>
+                        <p class="precio-alquiler">📚 <strong>Alquiler:</strong> ₲@Model.PrecioAlquiler</p>
+                    </div>
 
-        // Ocultar después de 2 segundos y enviar el formulario
-        setTimeout(() => {
-            popup.classList.remove('show');
-            form.submit();
-        }, 2000);
-    });
-</script>
+                    <h5 class="mt-4">Descripción:</h5>
+                    <p class="descripcion">@Model.Descripcion</p>
+
+                    <form method="post" asp-controller="Carrito" asp-action="Agregar">
+                        <input type="hidden" name="libroId" value="@Model.Id" />
+                        <button type="submit" class="btn btn-agregar">🛒 Agregar al carrito</button>
+                    </form>
+
+                    <div id="popup-agregado" class="popup-agregado">
+                        ✅ ¡Libro agregado al carrito!
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-danger text-center">
+                <h4>⚠ No se encontró la información del libro.</h4>
+            </div>
+        }
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>BookHub © @fechaActual</p>
+    </footer>
+
+    <!-- Script para el Modo Nocturno -->
+    <script>
+        const toggleButton = document.getElementById('toggleModo');
+        const body = document.body;
+
+        if (localStorage.getItem('modo') === 'oscuro') {
+            body.classList.add('dark-mode');
+            toggleButton.textContent = '☀️ Modo Diurno';
+        }
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '☀️ Modo Diurno';
+                localStorage.setItem('modo', 'oscuro');
+            } else {
+                toggleButton.textContent = '🌙 Modo Nocturno';
+                localStorage.setItem('modo', 'claro');
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Estilo para el Modo Oscuro -->
+    <style>
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        /* Estilos específicos para Detalle Libro (sin cambios) */
+        .titulo-libro {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .detalle {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        .precios {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .btn-agregar {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .popup-agregado {
+            display: none;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+
+            /* Mostrar el popup al agregar al carrito */
+            .popup-agregado.show {
+                display: block;
+            }
+    </style>
+
+</body>
+</html>

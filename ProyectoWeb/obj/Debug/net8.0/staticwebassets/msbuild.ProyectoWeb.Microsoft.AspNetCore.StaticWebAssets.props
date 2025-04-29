@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qfxbqdx7d1</Fingerprint>
-      <Integrity>BvwyzKKKeBdbQm9Raf2Xvqxj3+3E52m4JEkc6wbFmKc=</Integrity>
+      <Fingerprint>jlp8yy3eqc</Fingerprint>
+      <Integrity>lw2mmLzAuLgrYrph1x1aHuFl9lrqgu4HkKIH2j5mp24=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\acerca.css'))</OriginalItemSpec>

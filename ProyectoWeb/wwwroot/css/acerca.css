@@ -1,9 +1,9 @@
-﻿
-/* Estilos generales */
+﻿/* Estilos generales */
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
     overflow-x: hidden;
+    background-color: #f4f4f4; /* Un fondo general suave */
 }
 
 /* Sección 1 */
@@ -22,31 +22,89 @@ body {
 }
 
     .section1 .text {
-        font-size: 15rem; /* Tamaño de fuente mucho más grande */
+        font-size: 4rem; /* Reduzco un poco el tamaño */
         font-weight: bold;
-        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra más suave */
         margin: 0;
     }
 
     /* Logo opcional */
     .section1 .logo {
-        margin-top: 20px;
-        width: 150px; /* Ajusta el tamaño del logo */
+        margin-top: 30px; /* Un poco más de espacio */
+        width: 720px; /* CUADRUPLE del tamaño original */
         height: auto;
     }
 
 /* Sección 2 */
 .section2 {
-    height: 100vh;
-    background-color: #343a40;
+    min-height: 100vh; /* Usa min-height para que crezca con el contenido */
+    background-color: #e9ecef; /* Un fondo claro y sutilmente diferente */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
+    flex-direction: column; /* Alineamos los elementos en columna */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+    padding: 40px 20px; /* Añadimos un poco de padding general a la sección */
+    text-align: center; /* Centramos el texto */
+    color: #343a40; /* Color de texto más oscuro */
 }
 
-    .section2 .text {
-        font-size: 3rem; /* Tamaño de fuente estándar */
+    .section2::before {
+        content: "";
+        background-image: url('/images/LogoBookHub_fondo.jpg'); /* Ruta del OTRO logo de fondo */
+        background-size: contain; /* Ajusta el tamaño para que quepa dentro */
+        background-repeat: no-repeat;
+        background-position: center; /* Mantenemos el centrado */
+        opacity: 0.15; /* Un poco más visible que antes */
+        position: absolute;
+        top: 50%; /* Centramos verticalmente */
+        left: 50%; /* Centramos horizontalmente */
+        transform: translate(-50%, -50%); /* Ajuste para centrado exacto */
+        width: 200%; /* Logo de fondo AÚN MÁS GRANDE */
+        height: auto;
+        z-index: -1; /* Detrás del contenido */
+        filter: blur(5px); /* Efecto de desenfoque para difuminar */
     }
+
+    .section2 .text {
+        background-color: transparent; /* Quitamos el fondo del recuadro */
+        padding: 0; /* Quitamos el padding del recuadro */
+        border-radius: 0; /* Quitamos los bordes redondeados */
+        text-align: center; /* Centramos el texto */
+        max-width: 80%; /* Un ancho máximo razonable para el texto */
+        box-shadow: none; /* Quitamos la sombra */
+    }
+
+        .section2 .text h2 {
+            font-size: 3rem; /* Tamaño de encabezado más grande */
+            color: #343a40; /* Color de texto más oscuro */
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .section2 .text h3 {
+            font-size: 2rem; /* Tamaño de subencabezado más grande */
+            color: #343a40;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section2 .text p,
+        .section2 .text ul {
+            font-size: 1.4rem; /* Tamaño de texto normal más grande */
+            line-height: 1.8;
+            color: #495057;
+            margin-bottom: 1.5rem;
+        }
+
+        .section2 .text ul {
+            padding-left: 0; /* Quitamos el padding de la lista */
+            list-style-type: none; /* Quitamos las viñetas si no las quieres centradas */
+        }
+
+        .section2 .text li {
+            margin-bottom: 0.8rem;
+        }
+
+        .section2 .text img {
+            display: none; /* Ocultamos la imagen dentro del texto */
+        }

@@ -67,10 +67,7 @@ namespace ProyectoWeb.Controllers
             // Guardar los datos temporalmente
             TempData["Mensaje"] = $"¡Registro exitoso! Tu número de cliente es {numeroCliente}.";
 
-            // Si necesitas guardar estos datos en una base de datos, este es el lugar adecuado
-            // Por ejemplo:
-            // _context.Clientes.Add(new Cliente { Nombre = fullName, Cedula = cedula, Email = email, Teléfono = phone, Dirección = address, NumeroCliente = numeroCliente });
-            // _context.SaveChanges();
+           
 
             return RedirectToAction("Login"); // Redirige al login después de registrar
         }
