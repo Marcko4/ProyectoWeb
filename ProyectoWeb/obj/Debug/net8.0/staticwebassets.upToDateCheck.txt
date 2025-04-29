@@ -1,3 +1,4 @@
+wwwroot\css\acerca.css
 wwwroot\css\detallelibro.css
 wwwroot\css\site.css
 wwwroot\css\styles.css
@@ -10,6 +11,7 @@ wwwroot\images\Elalquimista.jpg
 wwwroot\images\Elextranjero.jpg
 wwwroot\images\Elinversorinteligente.jpg
 wwwroot\images\Elpoderdelahora.jpg
+wwwroot\images\fondo_biblioteca.jpg
 wwwroot\images\fondologin.jpg
 wwwroot\images\Habitosatomicosjpg.jpg
 wwwroot\images\Lafelicidad.jpg

@@ -1,0 +1,52 @@
+﻿
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Sección 1 */
+.section1 {
+    height: 100vh;
+    background-image: url('/images/fondo_biblioteca.jpg'); /* Cambia por la ruta de tu imagen */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Permite apilar elementos (texto y logo) */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+    .section1 .text {
+        font-size: 15rem; /* Tamaño de fuente mucho más grande */
+        font-weight: bold;
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada */
+        margin: 0;
+    }
+
+    /* Logo opcional */
+    .section1 .logo {
+        margin-top: 20px;
+        width: 150px; /* Ajusta el tamaño del logo */
+        height: auto;
+    }
+
+/* Sección 2 */
+.section2 {
+    height: 100vh;
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+    .section2 .text {
+        font-size: 3rem; /* Tamaño de fuente estándar */
+    }
