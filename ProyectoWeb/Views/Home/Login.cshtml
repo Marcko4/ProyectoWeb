@@ -7,91 +7,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Iniciar Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
+            background: url('/images/fondologin.jpg') no-repeat center center/cover;
         }
 
         .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 320px;
-            max-width: 100%;
-            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: white;
         }
 
-        h2 {
-            text-align: center;
-        }
+            .login-container h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
 
         .input-field {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .login-btn, .register-btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #e54725;
-            color: white;
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            border-bottom: 2px solid white;
+            background: transparent;
+            color: white;
+            font-size: 1rem;
         }
 
-            .login-btn:hover,
-            .register-btn:hover {
-                background-color: #d43f1b;
+            .input-field:focus {
+                outline: none;
+                border-bottom: 2px solid #ff6a3d;
             }
 
-        img {
+        .login-btn {
             width: 100%;
-            height: auto;
-            margin-bottom: 10px;
+            padding: 12px;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #e54725, #ff6a3d);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
         }
+
+            .login-btn:hover {
+                background: linear-gradient(90deg, #ff6a3d, #e54725);
+            }
+
+        .links {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+            .links a {
+                color: #ff6a3d;
+                text-decoration: none;
+                margin: 0 5px;
+            }
+
+                .links a:hover {
+                    text-decoration: underline;
+                }
     </style>
 </head>
-<body style="background-image: url('/images/fondologin.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form>
+            <input type="text" class="input-field" placeholder="Email" required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <button type="submit" class="login-btn">Log in</button>
+        </form>
+        <div class="links">
+            <a href="/Home/Inicio">Volver al inicio</a> |
+            <a href="#">Olvidé mi contraseña</a> |
+            <a href="/Home/Registro">Registrarme</a>
 
-    <center>
-        <div class="login-container">
-            <img src="/images/LoginUser.png" alt="Banner Login">
-            <h2>Login</h2>
-
-            @if (TempData["Mensaje"] != null)
-            {
-                <p style="color: green; text-align:center;">@TempData["Mensaje"]</p>
-            }
-
-            <form>
-                <input type="text" class="input-field" placeholder="Usuario" required>
-                <input type="password" class="input-field" placeholder="Contraseña" required>
-                <button type="submit" class="login-btn">Iniciar Sesión</button>
-            </form>
-
-            <br>
-
-            <form action="/Home/Registro" method="get">
-                <button type="submit" class="register-btn">Registrarse</button>
-            </form>
         </div>
-    </center>
-
+    </div>
 </body>
 </html>
+
